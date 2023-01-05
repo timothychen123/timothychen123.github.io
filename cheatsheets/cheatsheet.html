@@ -4,8 +4,43 @@
     <link rel="stylesheet" href="./cheatsheet.css" />
   </head>
   <body>
+
     <div class="page-container">
+      <ul>
+        <li><a href="/about-me/about-me.html">About Me</a></li>
+        <li><a href="cheatsheets/cheatsheet.html">Cheatsheet</a></li>
+        <li><a href="/writeup/writeup.html">Writeup</a></li>
+      </ul>
+    </div>
+
+    <div>
       <h1 class="header">Cheat Sheet</h1>
+    </div>
+
+    <div>
+      <h2>CSS Section</h2>
+      <p>
+        CSS Transition for jiggle:
+      </p>
+      <p>
+        animation: shake 0.8s
+      </p>
+      <p>
+        @keyframes shake{
+          0%{
+            transform: translateX(0)
+          }
+          25%{
+            transform: translateX(25px);
+          }
+          50%{
+            transform: translateX(-25px);
+          }
+          100%{
+            transform: translateX(0px);
+          }
+        }
+      </p>
     </div>
   </body>
 </html>

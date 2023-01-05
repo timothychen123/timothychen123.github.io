@@ -1,28 +1,72 @@
-.picture {
-  width: 300px;
-  border: 1px solid black;
-  border-radius: 10px;
-  cursor: pointer;
+img {
+  width: 100%;
+  border-radius: 12px;
+  height: 214px;
   object-fit: cover;
-  aspect-ratio: 1;
-}
-
-.picture:hover {
-  filter: brightness(80%);
-}
-
-.picture-container {
-  display: flex;
-  flex-wrap: wrap;
-  width: 80%;
-  margin: auto;
-  gap: 12px;
 }
 
 body {
-  background-color: tan;
-  font-family: Arial, Helvetica, sans-serif;
-  color: white;
+  font-family: "Didot", serif;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 5vh;
+  display: inline-block;
+  padding: 50px;
+  margin-left: 60px;
+}
+
+.card {
+  background-color: white;
+
+  border: 1px solid #bacdd8;
+
+  padding: 8px;
+
+  border-radius: 12px;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 600;
+
+  margin-top: 16px;
+}
+
+p {
+  font-size: 14px;
+  color: #7f8c9b;
+  line-height: 150%;
+}
+
+#leadtext {
+  font-size: 20px;
+}
+
+button {
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+
+  font-weight: 600;
+  color: #0077ff;
+  background-color: #e0efff;
+
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+}
+
+.card__details {
+  padding: 16px 8px 8px 8px;
+}
+
+button:focus,
+button:hover {
+  background-color: #0077ff;
+  color: #e0efff;
 }
 
 .page-container {
@@ -35,35 +79,67 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-}
-
-li {
-  display: inline;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
   overflow: hidden;
-  background-color: #333;
-  display: inline-block;
-  list-style-type: none;
+  background-color: white;
 }
 
 li {
-  float: left;
+  float: right;
 }
 
 li a {
   display: block;
-  color: white;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
 li a:hover {
-  background-color: #111;
+  text-decoration: underline;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.header {
+  background-color: #f3ec78;
+  background-image: linear-gradient(45deg, #f3ec78, #af4261);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  background-color: #f3ec78;
+  background-image: linear-gradient(#f3ec78, #af4261);
+  background-image: conic-gradient(#f3ec78, #af4261);
+}
+
+.header:hover {
+  background-color: #f3ec78;
+  background-image: linear-gradient(45deg, #f3ec78, #af4261);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  background-color: #f3ec78;
+  background-image: linear-gradient(#4a61e2, #e5637f);
+  animation: shake 0.8s
+}
+
+@keyframes shake{
+  0%{
+    transform: translateX(0)
+  }
+  25%{
+    transform: translateX(25px);
+  }
+  50%{
+    transform: translateX(-25px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
 }
