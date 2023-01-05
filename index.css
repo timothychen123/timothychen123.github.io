@@ -30,3 +30,9 @@ body {
   margin-top: 5rem;
   margin: auto;
 }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
