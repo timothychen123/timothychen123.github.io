@@ -10,7 +10,7 @@ body {
   margin: auto;
 }
 
-ul {
+#header {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -18,7 +18,7 @@ ul {
   background-color: white;
 }
 
-li {
+.header-text {
   float: right;
 }
 
@@ -32,4 +32,8 @@ li a {
 
 li a:hover {
   text-decoration: underline;
+}
+
+img {
+  width: 50%;
 }
