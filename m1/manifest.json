@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Font Changer",
+    "description": "Changes all font on page.",
+    "version": "1.0",
+    "action": {
+        "default_popup": "popup/font.html",
+        "default_icon": "popup/icon.png"
+    },
+    "permissions": [
+      "storage",
+      "tabs"
+    ],
+    "content_scripts": [
+        {
+          "matches": [
+              "*://*/*"
+          ],
+          "js": [
+              "content-scripts/replace.js"
+          ]
+      }
+  ]
+}
