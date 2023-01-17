@@ -1,13 +1,13 @@
 // Add a message listener that sets the value of "replace"
-chrome.runtime.onMessage.addListener((request) => {
-  /*const newFont = message.font;
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  const newFont = message.font;
 
-  document.body.style.fontFamily = newFont;*/
+  document.body.style.fontFamily = newFont;
 
   /*function (font) {
     document.body.style.fontFamily = font.value;
   }*/
-  changeText();
+  /*changeText();*/
 });
 
 // Checks the current value of replace and run walk nodes
