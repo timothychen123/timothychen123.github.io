@@ -1,26 +1,27 @@
-function listen(eventType, selector, callback) {
-  document.querySelector(selector).addEventListener(eventType, callback);
-}
+const addBlockButton = document.getElementById("open-options");
 
-/*async function updateContentScript(changeText) {
+// Add event listeners to the checkbox and button
+addBlockButton.addEventListener("click", (e) => updateContentScript(true));
+
+async function updateContentScript() {
   // Sends a message to the content script with an object that has the
   // current value of the checkbox and a boolean (whether to add a block)
+  const message = { message: "Change the text" };
   const [tab] = await chrome.tabs.query({
     active: true,
     lastFocusedWindow: true,
   });
-  const response = await chrome.runtime.sendMessage(changeText);
+  const response = await chrome.tabs.sendMessage(tab.id, message);
   // You can do something with response from the content script here
   console.log(response);
-}*/
-
-async function sendMessageToContentScript() {
-  chrome.runtime.sendMessage("message");
-  // You can do something with response from the content script here
-  console.log("sending message");
 }
 
-listen("click", "#open-options", (e) =>
-  sendMessageToContentScript()
-);
+/*const messageButton = document.getElementById("open-options");
+const fontPicker = document.getElementById("input-font");
+
+const sendMessage = (e) => {
+  updateContentScript({ font: fontPicker.value })
+};
+
+messageButton.addEventListener("click", (e) => updateContentScript(true));*/
 

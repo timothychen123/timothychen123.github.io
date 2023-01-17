@@ -1,30 +1,17 @@
-chrome.runtime.onMessage.addListener((message) => {
+// Add a message listener that sets the value of "replace"
+chrome.runtime.onMessage.addListener((request) => {
+  /*const newFont = message.font;
+
+  document.body.style.fontFamily = newFont;*/
+
+  /*function (font) {
+    document.body.style.fontFamily = font.value;
+  }*/
   changeText();
 });
 
-/*function walkNodes(node, replacements) {
-  let child, next;
-
-  // We use a switch statement to decide what to do based on the node type.
-  // See: https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType
-  switch (node.nodeType) {
-    case 1: // Element - you could check for specific kinds of elements here
-    case 9: // Document
-    case 11: // Document fragment
-      child = node.firstChild;
-      while (child) {
-        next = child.nextSibling;
-        changeText();
-        child = next;
-      }
-      break;
-    case 3: // Text node
-      changeText();
-      break;
-  }
-}*/
-
+// Checks the current value of replace and run walk nodes
 function changeText() {
-  document.documentElement.style.setProperty('font', "Courier, monospace");
-  console.log("hello")
+  alert("hello!")
+  document.body.style.fontFamily = "monospace";
 }

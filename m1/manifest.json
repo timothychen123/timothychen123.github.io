@@ -8,9 +8,8 @@
         "default_icon": "popup/icon.png"
     },
     "permissions": [
-      "storage",
-      "tabs"
-    ],
+      "storage"
+  ],
     "content_scripts": [
         {
           "matches": [
