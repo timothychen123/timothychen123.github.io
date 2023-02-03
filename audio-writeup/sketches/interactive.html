@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>Interactive</title>
+    <style>
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <script>
+
+      let angle = 0;
+      // Create a new canvas to the browser size
+      function setup() {
+        createCanvas(windowWidth, windowHeight);
+      }
+
+      function draw() {
+        let gridSize = 20;
+        background(0);
+        for (let x = gridSize; x <= width - gridSize; x += gridSize) {
+          for (let y = gridSize; y <= height - gridSize; y += gridSize) {
+            h = random(20, 255);
+            f = random(100, 255);
+            a = random (255);
+            b = random (255);
+            rect(x, y - 1, 2, 2);
+            stroke(a, b, h);
+          if (mouseIsPressed === true) {
+            angle += 12;
+            let val = cos(radians(angle)) * 20.0;
+            for (let a = 0; a < 360; a += 75) {
+              let xoff = cos(radians(a)) * val;
+              let yoff = sin(radians(a)) * val;
+              fill(0);
+              ellipse(mouseX + xoff, mouseY + yoff, val, val);
+            }
+            fill(255);
+            ellipse(mouseX, mouseY, 2, 2);
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+</html>

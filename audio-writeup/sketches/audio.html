@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/addons/p5.sound.js"></script>
+    <title>Audio</title>
+    <style>
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      var song;
+
+     function preload() {
+        song = loadSound("assets/fireflies.mp3");
+      }
+      // Create a new canvas to the browser size
+      function setup() {
+        createCanvas(windowWidth, windowHeight);
+      }
+
+      function mousePressed() {
+        song.play();
+      }
+
+      function draw() {
+        let gridSize = 20;
+        background(0);
+
+        for (let x = gridSize; x <= width - gridSize; x += gridSize) {
+          for (let y = gridSize; y <= height - gridSize; y += gridSize) {
+            h = random(20, 255);
+            f = random(100, 255);
+            a = random (255);
+            b = random (255);
+            rect(x - 2, y - 1, 2, 2);
+            stroke(a, b, h);
+            line(x, y, width / 2, 2);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

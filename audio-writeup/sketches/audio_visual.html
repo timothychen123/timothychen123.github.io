@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>Audio and Visuals</title>
+    <style>
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <script>
+      let mic;
+      let gridsize = 20;
+
+      // Create a new canvas to the browser size
+      function setup() {
+        createCanvas(windowWidth, windowHeight);
+        mic = new p5.AudioIn();
+        mic.start();
+      }
+
+      function draw() {
+        background(0);
+
+        // Get the overall volume (between 0 and 1.0)
+        let vol = mic.getLevel();
+        stroke(0);
+
+        let si = map(vol, 0, 1, 0, 200);
+        let x = width / 2;
+        let y = height / 2;
+
+        for (let x = gridSize; x <= width - gridSize; x += gridSize) {
+          for (let y = gridSize; y <= height - gridSize; y += gridSize) {
+            h = random(20, 255) * vol * 10;
+            f = random(100, 255) * vol * 10;
+            a = random (255) * vol * 10;
+            b = random (255) * vol * 10;
+            rect(x - 2, y - 1, 2, 2);
+            stroke(a, b, h) * vol * 5;
+            line(x, y, width / 2, 2) * vol * 100;
+          }
+        }
+      }
+    </script>
+  </head>
+</html>
