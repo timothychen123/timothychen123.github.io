@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/game.css" />
+  </head>
+  <body>
+
+    <div class="page-container">
+      <ul id="header">
+        <li class="header-text"><a href="../about-me/about-me.html">About Me</a></li>
+        <li class="header-text"><a href="../cheatsheets/cheatsheet.html">Cheatsheet</a></li>
+        <li class="header-text"><a href="../writeup/writeup.html">Writeup</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h1 class="header page-container">Writeup</h1>
+      <br>
+      <h2 class="header page-container"> MP3 </h2>
+    </div>
+
+    <br>
+
+    <div class="page-container">
+      <a href="https://timothychen123.github.io/snake/" target="_blank">Snake Game</a>
+    </div>
+
+    <div class ="page-container">
+      <h2>Overivew and Usage</h2>
+      <p> My project consists of an implementation of the popular snake.io game. For those that may not
+        know this game, essentially it involves going around a certain grid and collects food to grow bigger.
+        To lose the game, the user needs to move the snake into the edges of the grid or overlap the snake on itself.
+        To play this game you can click the link at the top of the page. To run this code you can go to my github repo
+        which is listed below and clone my snake repo. You can copy the code in both index.js and snake.html
+        and put it into p5 and play the game.
+      </p>
+      <a href="https://github.com/timothychen123/timothychen123.github.io" target="_blank">Github Repo</a>
+
+      <h2>Development Process</h2>
+      <p> My step by step process consisted of: </p>
+      <ol type ="1">
+        <li> Look at examples of people building games in p5 </li>
+        <li> Thinking about how I would create snake in p5 and looking at examples </li>
+        <li> Implementing it in p5 </li>
+        <li> Adding a way to keep track of the score </li>
+        <li> Adding an intro screen and a way to play again </li>
+      </ol>
+
+      <p>Here is an image of an unfinished state of my website.</p>
+      <div id="unfinished">
+        <img src="unfinished.png">
+      </div>
+
+      <h2>Issue Deep-Dive </h2>
+      <p> One of the problems I encountered was in trying to show the score on the game. I was able to
+        calculate the score in the back and keep track of it but wasn't too sure of how to display it.
+        I talked with my classmate, Andy, and he directed me to the p5 resources for showing text. I
+        was then able to apply the visual score in the game and that solved the issue.
+      </p>
+
+      <p> Another problem I encountered was that my html wouldn't load in the browser when I moved the
+        code into a script tag in html. I was able to solve this through going to office hours with Raina
+        and she helped walk me through how to go about fixing the errors I had in my console. I had forgotten
+        to create the rollup.config.js as well as do npm run deploy to see if it worked on the live site. Once
+        I was able to fix these issues my live site was working with the snake game.
+      </p>
+
+      <h2>Ideas and Future Work </h2>
+      <p> Additional ideas and features I might like to add to my site in the future: </p>
+
+      <ul>
+        <li>Making my site mobile friendly and responsive</li>
+        <li>Checking on accessibility sitewide</li>
+        <li>Add a favicon</li>
+      </ul>
+
+      <h2>Kudos</h2>
+
+      <ul>
+        <li>Raina</li>
+        <li>Hannah's Github Repo</li>
+        <li>Andy Shaw</li>
+        <li class="kudos"><a href="https://www.youtube.com/watch?v=AaGK-fj-BAM&ab_channel=TheCodingTrain" target="_blank">Coding Train</a></li>
+        <li class="kudos"><a href="https://www.youtube.com/watch?v=MMATv1xJw6o&ab_channel=Radiium" target="_blank">Snake Game Example</a></li>
+        <li class="kudos"><a href="https://www.youtube.com/watch?v=fY6680aNl4E&ab_channel=ColorfulCoding" target="_blank">Game Over and Score</a></li>
+      </ul>
+
+    </div>
+
+  </body>
+</html>
