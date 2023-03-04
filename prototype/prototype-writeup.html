@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+
+    <title>Final Project Prototype</title>
+
+    <div class="page-container">
+      <ul id="header">
+        <li class="header-text"><a href="../about-me/about-me.html">About Me</a></li>
+        <li class="header-text"><a href="../cheatsheets/cheatsheet.html">Cheatsheet</a></li>
+        <li class="header-text"><a href="../writeup/writeup.html">Writeup</a></li>
+        <li class="header-text"><a href="../index.html">Home</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h1 class="header page-container">Writeup</h1>
+      <br>
+      <h2 class="header page-container"> Final Project Prototype </h2>
+    </div>
+
+    <div class ="page-container">
+      <h2>Overivew and Usage</h2>
+      <p> My project consists of an implementation of a singe player skribblio like game. For those that
+        may not know this game, essentially it involves getting prompted with a random word and then having
+        to draw that word within a given time limit.
+      <p> Here is a gif of my game.</p>
+      <img src="prototype.gif">
+      <p>To run this code you can go to my github repo which is listed below and clone my prototype repo.
+        You can copy the code in both index.js and snake.html and put it into p5 and play the game.
+      </p>
+      <a href="https://github.com/timothychen123/gameprototype/tree/main" target="_blank">Github Repo</a>
+
+      <h2>Development Process</h2>
+      <p> My step by step process consisted of: </p>
+      <ol type ="1">
+        <li> Breaking down all components that I would need to create </li>
+        <li> Checking how to implement a pencil like drawing element in p5 </li>
+        <li> Researching how to implement a simple timer/countdown in p5 </li>
+        <li> Implementing a random word generator function </li>
+        <li> Combining the random word generator and pencil like drawing element in p5 </li>
+        <li> Adding in the timer into p5 </li>
+        <li> Fixing bugs with the timer overlapping on itself after every second </li>
+        <li> Fixing bugs with running my code in the local server </li>
+      </ol>
+
+      <p>Here is an image of an unfinished state of my website.</p>
+      <img src="unfinished.png">
+
+      <h2>Issue Deep-Dive </h2>
+      <p> One of the problems I faced was not being able to get my code working locally. I was
+        able to get assistance from Hannah in which she showed me that I needed to add treeshake: false statement
+        in my rollup.config.js as well as get rid of type module in my script in index.html. </p>
+
+      <p> Another problem I faced was that for my timer the numbers were overlapping on top of one another.
+        Andy and Alfie were able to help me by telling me in my draw function to put in a rectangle block
+        over the number that would essentially cover the old number and then put the new number on top. In
+        this way, it was able to show each second without it overlapping on the previous one.
+      </p>
+
+      <h2>Project Scope </h2>
+      <p> My project scope hasn't changed since I completed my prototype. I think I'm on track to get
+        where I wanted to for the final project and could potentially look to implement one of my stretch
+        goals if I have the time. If not, I will definitely be able to meet what I had set out for my final project. </p>
+
+      <h2>Time Management </h2>
+      <p> The amount of time I spent on building my prototype was consistent with the initial plan I had set out.
+        I thought it would take me close to the full week from when I started working on it till when it was due,
+        which was true. Some unanticipated roadblocks I had were with getting the timer to not overlap on itself
+        but was able to problem solve it with the help from my peers. I also wasn't able to check my game in my
+        localhost but by getting help from Hannah I was able to resolve those. Besides these setbacks, everything
+        else went rather smoothly. </p>
+
+      <h2>Implementation Plan </h2>
+      <p> My implementation plan has not changed for my final version after completing my prototype.
+        The plan is still what I thought it would be when I started. For this next step, I will just be
+        doing some more research on additional features I hope to implement and then looking to
+        implement them. </p>
+
+      <h2>Ideas and Future Work </h2>
+      <p> Additional ideas and features I might like to add to my site in the future: </p>
+
+      <ul>
+        <li>Make my site mobile responsive and add a favicon</li>
+        <li>Adding in better pictures across the projects</li>
+        <li>Add dropdowns for my writeups so it's a bit easier to access</li>
+        <li>Make homepage stand out a bit more either through background changes or changing each assignment to pop out a bit more</li>
+      </ul>
+
+      <h2>Kudos</h2>
+
+      <ul>
+        <li>Alfie</li>
+        <li>Andy</li>
+        <li>Hannah</li>
+        <li class="kudos"><a href="https://editor.p5js.org/marynotari/sketches/S1T2ZTMp-" target="_blank">Timer in P5</a></li>
+        <li class="kudos"><a href="https://editor.p5js.org/xujenna/sketches/SJPmKMihZ" target="_blank">Drawing with Pen</a></li>
+        <li class="kudos"><a href="https://editor.p5js.org/Zoe/sketches/HJdsXS1BZ" target="_blank">Drawing in P5</a></li>
+      </ul>
+
+    </div>
+
+  </body>
+</html>
