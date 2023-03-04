@@ -7,9 +7,10 @@
 
     <div class="page-container">
       <ul>
-        <li><a href="../about-me/about-me.html">About Me</a></li>
-        <li><a href="cheatsheet.html">Cheatsheet</a></li>
-        <li><a href="../writeup/writeup.html">Writeup</a></li>
+        <li class="header-text"><a href="../about-me/about-me.html">About Me</a></li>
+        <li class="header-text"><a href="../cheatsheets/cheatsheet.html">Cheatsheet</a></li>
+        <li class="header-text"><a href="../writeup/writeup.html">Writeup</a></li>
+        <li class="header-text"><a href="../index.html">Home</a></li>
       </ul>
     </div>
 
@@ -18,10 +19,9 @@
     </div>
 
     <div>
-      <h2>CSS Section</h2>
-      <p>
+      <h2>
         CSS Transition for jiggle:
-      </p>
+      </h2>
       <p>
         animation: shake 0.8s
       </p>
@@ -41,6 +41,91 @@
           }
         }
       </p>
+
+      <h2>
+        Extension Setup
+      </h2>
+
+      <p>
+        async function sendMessageToContentScript(message) {
+      </p>
+      <p>const [tab] = await chrome.tabs.query({</p>
+      <p>active: true,</p>
+      <p>lastFocusedWindow: true, });</p>
+      <p>const response = await chrome.tabs.sendMessage(tab.id, message); }</p>
+      <p>const messageButton = document.getElementById("open-options");</p>
+      <p>const fontInput = document.getElementById("input-font");</p>
+      <p>const sendMessage = (e) => {</p>
+      <p>sendMessageToContentScript({ font: fontInput.value }); };</p>
+      <p>messageButton.addEventListener("click", sendMessage);</p>
+
+      <h2>
+        Gallery Setup (3x2)
+      </h2>
+
+      <p>
+        h1 header
+      </p>
+      <p> [tab in] div with a class of outer</p>
+      <p> [tab in] div with a class of row</p>
+      <p> [tab in] div with a class of item</p>
+      <p> image </p>
+      <p> close div</p>
+      <p> div with a class of item </p>
+      <p> add two more divs, images, and close divs </p>
+      <p> div with a class of row </p>
+      <p> div with a class of item </p>
+      <p> image </p>
+      <p> close div</p>
+      <p> add two more divs, images, and close all divs </p>
+
+      <h2> Styling for Gallery </h2>
+      <p>
+        .outer {
+          display: flex;
+          min-height: 100%;
+          flex-direction: column;
+          border-style: solid;
+        }
+
+        .row {
+          display: flex;
+          flex: 1;
+          border-style: solid;
+        }
+
+        .item {
+          flex: 1;
+          border-style: solid;
+        }
+      </p>
+
+      <h2> Connecting popup to an html</h2>
+      <p>
+        window.addEventListener("load", function(){
+          setTimeout(
+              function open(event){
+                  document.querySelector(".popup").style.display = "block";
+              }
+          )
+      });
+
+
+      document.querySelector("#close").addEventListener("click", function(){
+          document.querySelector(".popup").style.display = "none";
+      });
+      </p>
+
+      <h2> Timer in P5 </h2>
+      <p>  if (frameCount % 60 == 0 && timer > 0) {
+        timer --;
+      }
+     if (timer == 0) {
+       save('myCanvas.jpg');
+       textAlign(CENTER, CENTER);
+       text("DRAWING OVER", width/2, height/2);
+     }</p>
+
     </div>
   </body>
 </html>
