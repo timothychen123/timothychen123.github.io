@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/fp.css" />
+    <title>Final Project Prototype</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+  </head>
+  <body>
+
+    <div class="page-container">
+      <ul id="header">
+        <li class="header-text"><a href="../about-me/about-me.html">About Me</a></li>
+        <li class="header-text"><a href="../cheatsheets/cheatsheet.html">Cheatsheet</a></li>
+        <li class="header-text"><a href="../writeup/writeup.html">Writeup</a></li>
+        <li class="header-text"><a href="../index.html">Home</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h1 class="header page-container">Final Project Writeup</h1>
+      <br>
+      <h2 class="header page-container"> Drawing Game </h2>
+    </div>
+
+    <div class ="page-container">
+      <h2>Overivew and Usage</h2>
+      <p> My project is a drawing game similar to that of pictionary. For those that may not know this game,
+        it involves choosing how much time you would like to draw the a randomly generated word and then drawing
+        that word in another screen.
+      <p> Here is a gif of my game.</p>
+      <img src="fp-gif.gif" alt="Gif of my drawing game where I'm drawing on a man with a watch on a white background">
+      <p>To run this code you can go to my github repo which is listed below and clone it. You can copy the
+        code in the index.js, index.html, and popup.html and put it into p5 and play the game or run it locally as well.
+      </p>
+      <a href="https://github.com/timothychen123/final-project/tree/main" target="_blank">Github Repo</a>
+
+      <h2>Development Process</h2>
+      <p> My step by step process consisted of: </p>
+      <ol type ="1">
+        <li> Taking in feedback from the showcase in 438 class </li>
+        <li> Ideating on the implementation of the features such as multiple colors and choosing a time option </li>
+        <li> Adding more words into the word bank </li>
+        <li> Adding in the colors into p5 and checking to see if it worked </li>
+        <li> Adding in different size pen sizes to use when drawing </li>
+        <li> Adding in a popup to choose time options </li>
+        <li> Fixing issues with selecting a time option and having it connect to the index.js file </li>
+      </ol>
+
+      <p>Here is an image of an unfinished state of my website.</p>
+      <img src="unfinished-f.png" alt="image of unfinished state of game with only 4 colors to choose from">
+
+      <h2>Issue Deep-Dive </h2>
+      <p> One of the problems I encountered was in adding colors and then having the color be given to the pen.
+        One of the main issues I was having was getting the correct x and y coordinates of the ellipse of a specific color
+        and then reflecting that to the pen. I was able to solve this through trial and error where I would put in an x and y
+        coordinate I thought would work then tested it and then adjusted if it didn't work. Through this process I was eventually
+        able to get the correct colors to correspond when a user clicks on a specific color. </p>
+
+      <p> Another problem I encountered was that in my popup.html, when the user selected a time it wasn't saving
+        that variable and allowing for me to use it in index.js for my drawing game. I was able to get a lot of support
+        from Raina in which she directed me to session storage which we were able to implement and that solved the issue I was having.
+        By saving my variable to the session I could use it in my index.js file.
+      </p>
+
+      <h2>Ideas and Future Work </h2>
+      <p> Additional ideas and features I might like to add to my site in the future: </p>
+
+      <ul>
+        <li>Purchase and connect a custom domain</li>
+        <li>Adding more colors and features that would relate to my branding</li>
+        <li>Make navigation easier with dropdown and projects to look at when in a writeup or another project</li>
+      </ul>
+
+      <h2>Kudos</h2>
+
+      <ul>
+        <li>Arissa</li>
+        <li>Yuming</li>
+        <li>Andy</li>
+        <li>Raina</li>
+        <li>Hannah</li>
+        <li class="kudos"><a href="https://editor.p5js.org/Zoe/sketches/HJdsXS1BZ" target="_blank">Drawing in P5</a></li>
+      </ul>
+
+    </div>
+
+  </body>
+</html>
